@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sagarmatha PestGuard & Agri Solutions | Scientific Pest Control</title>
-  <meta name="description" content="Scientific, R&D-backed pest control and agriculture services in Nepal. Expert anti-termite and commercial pest management." />
+  <meta name="description" content="Scientific pest control and agriculture services across Nepal and the neighbouring India border region (Eastern Uttar Pradesh). Expert anti-termite and commercial pest management." />
+  <link rel="icon" href="logo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -26,6 +27,7 @@
         <a href="#services">Treatments</a>
         <a href="#methodology">Methodology</a>
         <a href="#rd-team">R&D & Team</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact" class="nav-cta">Book Inspection</a>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
@@ -39,36 +41,39 @@
     <div class="hero-bg-grid"></div>
     <div class="hero-inner">
       <div class="hero-content">
-        <span class="eyebrow">Advanced Scientific Protection</span>
-        <h1 class="hero-heading">Engineered to Protect. <br/><em>Proven to Last.</em></h1>
-        <p class="hero-sub">We don't just spray chemicals. We analyze the environment, formulate the exact dosage, and execute targeted treatments backed by IIT Kanpur R&D and Government-certified expertise.</p>
-        
-        <div class="hero-buttons">
+        <span class="eyebrow hero-anim" style="--d:0">Advanced Scientific Protection</span>
+        <h1 class="hero-heading">
+          <span class="line hero-anim" style="--d:1">Engineered to <em>Protect.</em></span>
+          <span class="line hero-anim" style="--d:2">Proven to <em>Last.</em></span>
+        </h1>
+        <p class="hero-sub hero-anim" style="--d:3">We don't just spray chemicals. We analyze the environment, formulate the exact dosage, and execute targeted treatments backed by 20+ years of field experience and government-certified expertise. We serve Nepal and the neighbouring India border region (Eastern Uttar Pradesh).</p>
+
+        <div class="hero-buttons hero-anim" style="--d:4">
           <a href="#contact" class="btn btn-primary">
             Request Scientific Inspection
             <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
 
-        <div class="hero-stats">
+        <div class="hero-stats hero-anim" style="--d:5">
           <div class="stat">
-            <span class="stat-num">20+</span>
-            <span class="stat-label">Years Govt Experience</span>
+            <span class="stat-num" data-count="20" data-suffix="+">0</span>
+            <span class="stat-label">Years Experience Since 2003</span>
           </div>
           <div class="stat-divider"></div>
           <div class="stat">
-            <span class="stat-num">IIT</span>
-            <span class="stat-label">R&D Backed Tech</span>
+            <span class="stat-num" data-count="100" data-suffix="+">0</span>
+            <span class="stat-label">Clients Across India &amp; Nepal</span>
           </div>
           <div class="stat-divider"></div>
           <div class="stat">
-            <span class="stat-num">100%</span>
-            <span class="stat-label">Targeted Efficacy</span>
+            <span class="stat-num">Licensed</span>
+            <span class="stat-label">Insecticides Act, 1968</span>
           </div>
         </div>
       </div>
       
-      <div class="hero-visual">
+      <div class="hero-visual hero-anim" style="--d:3" id="heroVisual">
         <div class="guarantee-seal">
           <div class="seal-inner">
             <div class="seal-shield">
@@ -87,11 +92,26 @@
     </div>
   </header>
 
+  <!-- COVERAGE / SERVICE AREA -->
+  <section class="coverage-section" id="coverage">
+    <div class="container coverage-inner">
+      <div class="coverage-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div class="coverage-text">
+        <span class="coverage-label">Where We Work</span>
+        <p>We serve Nepal and the neighbouring India border region (Eastern Uttar Pradesh). Call or WhatsApp us from Nepal or India — <a href="tel:+919235728017">+91 92357 28017</a> or <a href="https://wa.me/916394024817" target="_blank" rel="noopener">+91 63940 24817</a>.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- TRUSTED CLIENTS -->
   <section class="trusted-bar">
     <div class="trusted-inner">
-      <span class="trusted-label">Trusted by Leading Clients</span>
-      <div class="clients-logos">
+      <span class="trusted-label">Trusted by Leading Institutions</span>
+    </div>
+    <div class="marquee">
+      <div class="marquee-track">
         <div class="client-logo-card">
           <img src="doordarshan kendra.jpg" alt="Doordarshan Kendra, Gorakhpur" />
           <span>Doordarshan Kendra</span>
@@ -112,6 +132,27 @@
           <img src="hotel kasai.jpg" alt="Hotel Kasai, Lumbini" />
           <span>Hotel Kasai, Lumbini</span>
         </div>
+        <!-- duplicate set for seamless loop -->
+        <div class="client-logo-card" aria-hidden="true">
+          <img src="doordarshan kendra.jpg" alt="" />
+          <span>Doordarshan Kendra</span>
+        </div>
+        <div class="client-logo-card" aria-hidden="true">
+          <img src="DDU Gorakhpur.jpg" alt="" />
+          <span>DDU Gorakhpur</span>
+        </div>
+        <div class="client-logo-card" aria-hidden="true">
+          <img src="shiddhartha flours mills.png" alt="" />
+          <span>Siddhartha Flour Mills</span>
+        </div>
+        <div class="client-logo-card" aria-hidden="true">
+          <img src="hotel vivek.jpeg" alt="" />
+          <span>Hotel Vivek</span>
+        </div>
+        <div class="client-logo-card" aria-hidden="true">
+          <img src="hotel kasai.jpg" alt="" />
+          <span>Hotel Kasai, Lumbini</span>
+        </div>
       </div>
     </div>
   </section>
@@ -126,17 +167,17 @@
       </div>
 
       <div class="process-grid">
-        <div class="process-card">
+        <div class="process-card reveal" style="--d:0">
           <div class="process-step-num">01</div>
           <h3 class="process-title">Environmental Analysis</h3>
           <p class="process-desc">We conduct a rigorous site inspection. We analyze moisture levels, soil composition, structural vulnerabilities, and atmospheric conditions that allow pests to thrive.</p>
         </div>
-        <div class="process-card">
+        <div class="process-card reveal" style="--d:1">
           <div class="process-step-num">02</div>
           <h3 class="process-title">Custom Formulation</h3>
           <p class="process-desc">Based on the analysis, our technical team engineers a specific chemical dosage and treatment protocol. We use targeted compounds that destroy the colony while remaining safe for humans.</p>
         </div>
-        <div class="process-card">
+        <div class="process-card reveal" style="--d:2">
           <div class="process-step-num">03</div>
           <h3 class="process-title">Precision Execution</h3>
           <p class="process-desc">Our trained technicians execute the treatment plan using advanced equipment—injecting chemicals at the exact required depths and forming an impenetrable protective barrier.</p>
@@ -150,34 +191,34 @@
     <div class="container">
       <div class="team-grid">
         <div class="team-content reveal">
-          <span class="eyebrow">The Brains Behind The Protection</span>
-          <h2 class="section-heading">Backed by IIT Kanpur R&D & Govt. Expertise</h2>
-          <p class="section-intro">Sagarmatha PestGuard isn't a standard agency. We are a technically-driven family business where every treatment is designed by agriculture experts and optimized by elite academic research.</p>
+          <span class="eyebrow">The People Behind The Protection</span>
+          <h2 class="section-heading">Led by Field Experts, Advised by Ongoing Research</h2>
+          <p class="section-intro">Sagarmatha PestGuard isn't a standard agency. We are a technically-driven family business where every treatment plan is designed by a government-credentialed agriculture expert, with technical input from a family member pursuing research at IIT Kanpur.</p>
           
           <div class="team-members">
-            <div class="team-member">
+            <div class="team-member reveal" style="--d:0">
               <div class="member-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
               </div>
               <div class="member-details">
                 <h4>Subhash Prasad Chaudhary</h4>
                 <span class="member-role">Founder & Technical Head</span>
-                <p>M.Sc. Agriculture and Ex-Government Horticulture Officer. Designs and approves every treatment plan, ensuring the exact chemical dosage and strict PQPMC compliance.</p>
+                <p>M.Sc. Agriculture and ex-Government Horticulture Officer, Bihar (2013–2026). Known in the field as the "Doctor of Termite Treatment," with 20+ years of experience since 2003. Designs and approves every treatment plan, ensuring the exact chemical dosage and strict compliance.</p>
               </div>
             </div>
 
-            <div class="team-member">
+            <div class="team-member reveal" style="--d:1">
               <div class="member-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
               </div>
               <div class="member-details">
                 <h4>Suraj Chaudhary</h4>
-                <span class="member-role">Technical & R&D Advisor (PhD Scholar, IIT Kanpur)</span>
-                <p>Leads our continuous innovation. Researches better, safer treatment methods and integrates sensor-based data analysis for smarter, highly-credible institutional proposals.</p>
+                <span class="member-role">Technical & R&D Advisor (pursuing a PhD at IIT Kanpur)</span>
+                <p>Contributes ongoing research thinking to our treatment methods, exploring safer approaches and data-driven analysis to keep our proposals technically credible.</p>
               </div>
             </div>
 
-            <div class="team-member">
+            <div class="team-member reveal" style="--d:2">
               <div class="member-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
               </div>
@@ -193,9 +234,12 @@
         <div class="team-visual reveal">
           <div class="lab-badge">
             <div class="lab-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="var(--green-pine)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 3H15M10 9H14M3 14c0-2.5 2-4 4-4h10c2 0 4 1.5 4 4v6c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2v-6z"/>
-                <path d="M12 3v6"/>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 2v7.31"/>
+                <path d="M14 9.3V1.99"/>
+                <path d="M8.5 2h7"/>
+                <path d="M14 9.3a6.5 6.5 0 1 1-4 0"/>
+                <line x1="5.52" y1="16" x2="18.48" y2="16"/>
               </svg>
             </div>
             <h3>Formulation Precision</h3>
@@ -203,13 +247,13 @@
           </div>
           <div class="lab-badge">
             <div class="lab-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="var(--green-pine)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 13c0 5-3.5 7.5-7.35 8.95a1 1 0 0 1-.6.05C8.5 20.5 5 18 5 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C15.51 3.79 18 5 20 5a1 1 0 0 1 1 1z"/>
+                <path d="m9 12 2 2 4-4"/>
               </svg>
             </div>
-            <h3>Government Certified</h3>
-            <p>Full compliance with the Insecticides Act and PQPMC.</p>
+            <h3>Government Licensed</h3>
+            <p>Full compliance with the Insecticides Act, 1968.</p>
           </div>
         </div>
       </div>
@@ -228,7 +272,7 @@
       <div class="services-stack reveal">
         
         <!-- Anti-Termite -->
-        <div class="service-detailed-card" id="service-termite">
+        <div class="service-detailed-card reveal" id="service-termite">
           <div class="sdc-header">
             <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
             <div>
@@ -269,7 +313,7 @@
         </div>
 
         <!-- General Pest Control -->
-        <div class="service-detailed-card" id="service-pest">
+        <div class="service-detailed-card reveal" id="service-pest">
           <div class="sdc-header">
             <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/></svg></div>
             <div>
@@ -305,7 +349,7 @@
         </div>
 
         <!-- Agriculture Protection Services -->
-        <div class="service-detailed-card" id="service-agri">
+        <div class="service-detailed-card reveal" id="service-agri">
           <div class="sdc-header">
             <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><line x1="5.52" y1="16" x2="18.48" y2="16"/></svg></div>
             <div>
@@ -354,6 +398,169 @@
     </div>
   </section>
 
+  <!-- AMC / ANNUAL MAINTENANCE CONTRACT -->
+  <section class="amc-banner">
+    <div class="container amc-inner">
+      <div class="amc-text">
+        <span class="eyebrow eyebrow-light">For Hotels, Restaurants &amp; Institutions</span>
+        <h2 class="section-heading light-heading">Annual Maintenance Contracts (AMC)</h2>
+        <p class="amc-desc">Scheduled visits, priority service, and a property that's always inspection-ready — billed yearly.</p>
+        <p class="amc-trust-note">Trusted by hospitality clients on annual maintenance contracts, including Hotel Kasai (Lumbini) and Hotel Pawan (Bhairahwa).</p>
+      </div>
+      <a href="https://wa.me/916394024817?text=Hello%2C%20I%20am%20interested%20in%20an%20Annual%20Maintenance%20Contract%20(AMC)%20for%20my%20property." class="btn btn-primary" target="_blank" rel="noopener">
+        Ask about an annual contract
+        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section class="section case-studies-section" id="case-studies">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Our Work</span>
+        <h2 class="section-heading">Real Properties We've Protected</h2>
+        <p class="section-intro">A short, honest look at how our treatment plans have worked in practice.</p>
+      </div>
+
+      <div class="case-study-grid">
+        <div class="case-study-card reveal" style="--d:0">
+          <h3 class="case-study-title">Hotel Kasai, Lumbini (Nepal)</h3>
+          <div class="case-study-row">
+            <span class="case-label">Problem</span>
+            <p>A hospitality property needing dependable, ongoing protection across guest rooms, kitchen, restaurant, lobby and service areas — the kind of standard a hotel must maintain year-round.</p>
+          </div>
+          <div class="case-study-row">
+            <span class="case-label">Approach</span>
+            <p>A comprehensive post-construction anti-termite and rodent-control programme covering all built-up zones, structured as an ongoing engagement with a written guarantee.</p>
+          </div>
+          <div class="case-study-row">
+            <span class="case-label">Outcome</span>
+            <p>Hotel Kasai is among the hospitality clients we serve on an annual-maintenance basis — a relationship built on consistent, inspection-ready protection.</p>
+          </div>
+        </div>
+
+        <div class="case-study-card reveal" style="--d:1">
+          <h3 class="case-study-title">Hotel Vivek</h3>
+          <div class="case-study-row">
+            <span class="case-label">Problem</span>
+            <p>Persistent termite and insect concerns affecting the property.</p>
+          </div>
+          <div class="case-study-row">
+            <span class="case-label">Approach</span>
+            <p>Professional anti-termite treatment plus general insect control.</p>
+          </div>
+          <div class="case-study-row">
+            <span class="case-label">Outcome</span>
+            <p>The property became free from termites and insects; the client noted our work and conduct were excellent. <em>(Based on the client's written appreciation.)</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUARANTEE / WARRANTY TERMS -->
+  <section class="section guarantee-section" id="guarantee">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Our Promise</span>
+        <h2 class="section-heading">What Our Guarantee Covers</h2>
+        <p class="section-intro">Every treatment is backed by clear, written terms — not just a seal.</p>
+      </div>
+
+      <div class="guarantee-grid">
+        <div class="process-card reveal" style="--d:0">
+          <h3 class="process-title">Pre-Construction</h3>
+          <p class="process-desc">Whole-life protection of the property for as long as it stands — including both wood treatment and anti-termite soil treatment.</p>
+        </div>
+        <div class="process-card reveal" style="--d:1">
+          <h3 class="process-title">Post-Construction</h3>
+          <p class="process-desc">A 5-year guarantee from the date of treatment.</p>
+        </div>
+        <div class="process-card reveal" style="--d:2">
+          <h3 class="process-title">Free Re-Treatment</h3>
+          <p class="process-desc">If termite activity reappears within the guarantee period, we re-treat the affected area free of charge.</p>
+        </div>
+        <div class="process-card reveal" style="--d:3">
+          <h3 class="process-title">Documented &amp; Verifiable</h3>
+          <p class="process-desc">Every treatment is documented, so your warranty can be verified at any time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Common Questions</span>
+        <h2 class="section-heading">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Are the chemicals safe for my family and pets?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>Yes. We use only government-approved termiticides (Chlorpyrifos 20% EC and Cypermethrin 10% EC), applied at correct, safe dilutions. During treatment we ask that children and pets stay away from the treated area, and we recommend keeping the treated premises closed for about 24 hours afterward for best results.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How much does treatment cost?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>Anti-termite treatment is charged per square foot — indicatively ₹8 / NRs ~13 for post-construction and ₹10 / NRs ~16 for pre-construction. Annual Maintenance Contracts (AMC) for hotels and businesses start from around ₹1,00,000 / NRs ~1,60,000 per year. Final pricing is confirmed after a free site inspection.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How long does the treatment take?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>A home inspection takes 30–60 minutes; general pest control 1–3 hours; post-construction anti-termite treatment about a day for a typical home. Small hotels take 1–2 days, medium hotels 2–5 days, and larger hotels/resorts are done in phases to avoid disruption. Pre-construction treatment is staged with the construction schedule.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What does the guarantee cover?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>Pre-construction treatment protects the building for the entire life of the property (both wood treatment and anti-termite soil treatment). Post-construction treatment is guaranteed for 5 years. If termites reappear within the guarantee period, we re-treat the affected area free of charge.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Which areas do you serve?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>We serve Nepal and the neighbouring India border region (Eastern Uttar Pradesh). Contact us to check availability for your location.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT SECTION -->
   <section id="contact" class="section contact">
     <div class="container">
@@ -361,22 +568,35 @@
         <div class="contact-info reveal">
           <span class="eyebrow eyebrow-light">Initiate Inspection</span>
           <h2 class="section-heading light-heading">Deploy Our Experts to Your Site</h2>
-          <p class="contact-body">Whether you are building a new hotel or managing an agricultural estate, our team will analyze the site and propose a scientifically backed treatment plan.</p>
-          
+          <p class="contact-body">Whether you are building a new hotel or managing an agricultural estate, our team will analyze the site and propose a scientifically backed treatment plan. We serve Nepal and the neighbouring India border region (Eastern Uttar Pradesh).</p>
+
           <div class="contact-phones">
             <div class="phone-row">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               <div>
-                <span class="phone-label">Direct Line 1</span>
-                <span class="phone-num">+977 985-7033583</span>
+                <span class="phone-label">Direct Line</span>
+                <span class="phone-num">+91 92357 28017</span>
               </div>
             </div>
             <div class="phone-row">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               <div>
-                <span class="phone-label">Direct Line 2</span>
-                <span class="phone-num">+977 980-6976939</span>
+                <span class="phone-label">WhatsApp / Direct Line</span>
+                <span class="phone-num">+91 63940 24817</span>
               </div>
+            </div>
+          </div>
+          <p class="contact-note">Call or WhatsApp us from Nepal or India.</p>
+
+          <div class="contact-meta">
+            <div class="meta-row">
+              <span class="meta-label">Email</span>
+              <a class="meta-value" href="mailto:sagarmatha.pestguard@gmail.com">sagarmatha.pestguard@gmail.com</a>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Service Address</span>
+              <!-- CONFIRM: client to provide Nepal office address -->
+              <span class="confirm-placeholder">[CONFIRM ADDRESS]</span>
             </div>
           </div>
         </div>
@@ -384,6 +604,10 @@
         <div class="contact-form-wrap reveal">
           <h3 class="form-title">Request Analysis</h3>
           <p class="form-sub">Enter your details and our technical team will contact you.</p>
+          <div class="response-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            We call back within 2 hours.
+          </div>
           <form class="callback-form" id="leadForm">
             <div class="form-group">
               <label for="name">Contact Name</label>
@@ -391,11 +615,15 @@
             </div>
             <div class="form-group">
               <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" required placeholder="+977 XXXXX XXXXX" />
+              <input type="tel" id="phone" required placeholder="+91 XXXXX XXXXX" />
             </div>
             <div class="form-group">
-              <label for="service">Required Service</label>
-              <input type="text" id="service" required placeholder="e.g. Anti-Termite Pre-Construction" />
+              <label for="city">City / Location</label>
+              <input type="text" id="city" required placeholder="e.g. Gorakhpur, Kathmandu" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message <span class="label-optional">(optional)</span></label>
+              <textarea id="message" rows="3" placeholder="Tell us what you saw or what you need"></textarea>
             </div>
             <div id="formStatus" class="form-error"></div>
             <button type="submit" class="btn btn-primary btn-full">Submit Request</button>
@@ -407,22 +635,56 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-logo">
-        <img src="logo.jpg" alt="Logo" class="logo-img" style="filter: grayscale(100%) brightness(200%);"/>
-        <div class="logo-text">
-          <span class="logo-name">Sagarmatha PestGuard</span>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="logo.jpg" alt="Logo" class="logo-img" />
+          <div class="logo-text">
+            <span class="logo-name footer-logo-name">Sagarmatha</span>
+            <span class="logo-sub footer-logo-sub">PestGuard & Agri</span>
+          </div>
         </div>
+        <p class="footer-tagline">Clinical-grade pest management and advanced agriculture solutions, engineered with scientific precision. Serving Nepal and the neighbouring India border region (Eastern Uttar Pradesh).</p>
       </div>
-      <p class="footer-tagline">Clinical Grade Pest Management & Advanced Agriculture Solutions.</p>
+
+      <div class="footer-col">
+        <h5 class="footer-heading">Navigate</h5>
+        <a href="#services">Treatments</a>
+        <a href="#methodology">Methodology</a>
+        <a href="#rd-team">R&amp;D &amp; Team</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Book Inspection</a>
+      </div>
+
+      <div class="footer-col">
+        <h5 class="footer-heading">Services</h5>
+        <a href="#service-termite">Anti-Termite Treatment</a>
+        <a href="#service-pest">General Pest Control</a>
+        <a href="#service-agri">Agriculture Protection</a>
+        <a href="#guarantee">Guarantee Terms</a>
+      </div>
+
+      <div class="footer-col">
+        <h5 class="footer-heading">Contact</h5>
+        <a href="tel:+919235728017">+91 92357 28017</a>
+        <a href="tel:+916394024817">+91 63940 24817</a>
+        <a href="https://wa.me/916394024817" target="_blank" rel="noopener">WhatsApp Us</a>
+        <span class="footer-note">Call or WhatsApp us from Nepal or India.</span>
+        <span class="footer-confirm">Email: <a href="mailto:sagarmatha.pestguard@gmail.com">sagarmatha.pestguard@gmail.com</a></span>
+        <!-- CONFIRM: client to provide Nepal office address -->
+        <span class="footer-confirm">Address: <span class="confirm-placeholder">[CONFIRM]</span></span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
       <div class="footer-copy">
-        &copy; 2024 Sagarmatha PestGuard & Agri Solutions. All rights reserved.
+        &copy; 2024 Sagarmatha PestGuard &amp; Agri Solutions. All rights reserved.
       </div>
+      <div class="footer-credit">Scientific Pest Management &middot; Nepal</div>
     </div>
   </footer>
 
   <!-- WHATSAPP FLOATING BUTTON -->
-  <a href="https://wa.me/9779857033583" class="float-wa" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
+  <a href="https://wa.me/916394024817" class="float-wa" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 

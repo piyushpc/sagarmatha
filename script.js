@@ -64,13 +64,12 @@
 // ===== SCROLL REVEAL ANIMATION =====
 (function () {
   const elements = document.querySelectorAll(
-    '.reveal, .service-card, .process-card, .team-member, .lab-badge, .client-logo-card'
+    '.reveal, .service-card, .lab-badge, .client-logo-card'
   );
-  elements.forEach((el, i) => {
-    if(!el.classList.contains('reveal')) {
+  elements.forEach((el) => {
+    if (!el.classList.contains('reveal')) {
       el.classList.add('reveal');
     }
-    el.style.transitionDelay = (i % 4 * 0.08) + 's';
   });
 
   const observer = new IntersectionObserver((entries) => {
@@ -85,6 +84,55 @@
   elements.forEach(el => observer.observe(el));
 })();
 
+// ===== ANIMATED STAT COUNTERS =====
+(function () {
+  const nums = document.querySelectorAll('.stat-num[data-count]');
+  if (!nums.length) return;
+
+  const animateCount = (el) => {
+    const target = parseInt(el.getAttribute('data-count'), 10);
+    const suffix = el.getAttribute('data-suffix') || '';
+    const duration = 1400;
+    const start = performance.now();
+
+    const tick = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target) + suffix;
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  nums.forEach(el => observer.observe(el));
+})();
+
+// ===== SUBTLE HERO VISUAL PARALLAX =====
+(function () {
+  const visual = document.getElementById('heroVisual');
+  if (!visual || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(hover: none)').matches) return;
+
+  const seal = visual.querySelector('.guarantee-seal');
+  if (!seal) return;
+
+  window.addEventListener('mousemove', (e) => {
+    const { innerWidth, innerHeight } = window;
+    const x = (e.clientX / innerWidth - 0.5) * 12;
+    const y = (e.clientY / innerHeight - 0.5) * 12;
+    seal.style.transform = `translate(${x}px, ${y}px)`;
+  }, { passive: true });
+})();
+
 // ===== CALLBACK FORM → WhatsApp =====
 (function () {
   const form = document.getElementById('leadForm');
@@ -97,7 +145,8 @@
 
     const name = form.querySelector('#name').value.trim();
     const phone = form.querySelector('#phone').value.trim();
-    const service = form.querySelector('#service').value.trim();
+    const city = form.querySelector('#city').value.trim();
+    const message = form.querySelector('#message').value.trim();
 
     if (!name) {
       errorEl.textContent = 'Please enter your name.';
@@ -109,21 +158,52 @@
       form.querySelector('#phone').focus();
       return;
     }
+    if (!city) {
+      errorEl.textContent = 'Please enter your city or location.';
+      form.querySelector('#city').focus();
+      return;
+    }
 
     const msg = [
       'Hello, I am requesting a scientific site inspection from your website.',
       '',
       'Name: ' + name,
       'Phone: ' + phone,
-      service ? 'Requirement: ' + service : '',
+      'City/Location: ' + city,
+      message ? 'Message: ' + message : '',
     ].filter(Boolean).join('\n');
 
-    const url = 'https://wa.me/9779857033583?text=' + encodeURIComponent(msg);
+    const url = 'https://wa.me/916394024817?text=' + encodeURIComponent(msg);
     window.open(url, '_blank', 'noopener,noreferrer');
 
     // Reset form
     form.reset();
     errorEl.textContent = '';
+  });
+})();
+
+// ===== FAQ ACCORDION =====
+(function () {
+  const items = document.querySelectorAll('.faq-item');
+  if (!items.length) return;
+
+  items.forEach((item) => {
+    const question = item.querySelector('.faq-question');
+    if (!question) return;
+
+    question.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+
+      items.forEach((other) => {
+        other.classList.remove('open');
+        other.querySelector('.faq-question')?.setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isOpen) {
+        item.classList.add('open');
+        question.setAttribute('aria-expanded', 'true');
+      }
+    });
   });
 })();
 
