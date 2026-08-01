@@ -214,16 +214,20 @@ em { font-style: italic; font-weight: 500; color: var(--primary); }
 .hero-buttons { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 3.25rem; }
 
 .hero-stats {
-  display: flex; flex-wrap: wrap; gap: 0; align-items: stretch;
+  display: grid; grid-template-columns: 1fr 1fr; align-items: stretch;
   background: rgba(255,255,255,0.7); backdrop-filter: blur(8px);
   border: 1px solid var(--border-color);
   border-radius: var(--radius); width: fit-content; max-width: 100%;
   box-shadow: var(--shadow-sm);
 }
-.stat { text-align: center; padding: 1.35rem 1.75rem; display: flex; flex-direction: column; justify-content: center; }
+.stat {
+  text-align: center; padding: 1.35rem 1.75rem; display: flex; flex-direction: column; justify-content: center;
+  border-right: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);
+}
+.stat:nth-child(2n) { border-right: none; }
+.stat:nth-last-child(-n+2) { border-bottom: none; }
 .stat-num { display: block; font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600; color: var(--primary); line-height: 1; margin-bottom: 0.35rem; }
 .stat-label { font-size: 0.68rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
-.stat-divider { width: 1px; background: var(--border-color); }
 
 /* ===== HERO VISUAL / SHIELD SEAL ===== */
 .hero-visual { display: flex; justify-content: flex-end; align-items: center; }
@@ -572,8 +576,10 @@ em { font-style: italic; font-weight: 500; color: var(--primary); }
   .nav-links a { text-align: center; padding: 1rem; }
   .nav-links a:not(.nav-cta)::after { display: none; }
   .hamburger { display: flex; }
-  .hero-stats { flex-direction: column; width: 100%; }
-  .stat-divider { width: 100%; height: 1px; }
+  .hero-stats { grid-template-columns: 1fr; width: 100%; }
+  .stat { border-right: none; }
+  .stat:nth-last-child(-n+2) { border-bottom: 1px solid var(--border-color); }
+  .stat:last-child { border-bottom: none; }
   .team-visual { grid-template-columns: 1fr; }
   .float-wa { bottom: 1.25rem; right: 1.25rem; width: 56px; height: 56px; }
   .sdc-header { flex-direction: column; }
