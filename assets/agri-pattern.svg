@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="340" viewBox="0 0 340 340">
+  <rect width="340" height="340" fill="none"/>
+  <g opacity="0.06" fill="#14543A">
+    <!-- leaf 1 -->
+    <path d="M70 90 C40 78 34 46 74 34 C80 62 92 84 70 90 Z"/>
+    <!-- leaf 2 -->
+    <path d="M240 140 C270 128 276 96 236 84 C230 112 218 134 240 140 Z"/>
+    <!-- leaf 3 -->
+    <path d="M150 250 C120 238 114 206 154 194 C160 222 172 244 150 250 Z"/>
+  </g>
+  <g fill="none" stroke="#14543A" stroke-width="2" opacity="0.06">
+    <path d="M70 92 V60" /><path d="M240 142 V110"/><path d="M150 252 V220"/>
+    <!-- sprout -->
+    <path d="M290 70 q-14 -6 -18 -22 M290 70 q14 -6 18 -22 M290 70 V40"/>
+  </g>
+  <!-- gold wheat accent -->
+  <g fill="none" stroke="#C6973F" stroke-width="2" opacity="0.06">
+    <path d="M40 280 V240"/>
+    <path d="M40 250 q-8 -4 -10 -12 M40 250 q8 -4 10 -12"/>
+    <path d="M40 262 q-8 -4 -10 -12 M40 262 q8 -4 10 -12"/>
+  </g>
+</svg>

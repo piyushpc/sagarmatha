@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <rect width="300" height="300" fill="none"/>
+  <!-- subtle topographic contour lines (Everest theme, technical) -->
+  <g fill="none" stroke="#14543A" stroke-width="1.5" opacity="0.05">
+    <path d="M-20 150 Q80 90 150 130 T320 90"/>
+    <path d="M-20 180 Q80 120 150 160 T320 120"/>
+    <path d="M-20 120 Q80 60 150 100 T320 60"/>
+    <ellipse cx="150" cy="150" rx="60" ry="28"/>
+    <ellipse cx="150" cy="150" rx="38" ry="17"/>
+    <ellipse cx="150" cy="150" rx="18" ry="8"/>
+  </g>
+  <!-- gold droplet accents -->
+  <g fill="#C6973F" opacity="0.05">
+    <path d="M60 60 c-5 7 -5 12 0 14 c5 -2 5 -7 0 -14z"/>
+    <path d="M250 240 c-5 7 -5 12 0 14 c5 -2 5 -7 0 -14z"/>
+  </g>
+</svg>

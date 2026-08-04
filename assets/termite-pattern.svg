@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360">
+  <rect width="360" height="360" fill="none"/>
+  <g fill="none" stroke="#14543A" stroke-width="2" opacity="0.06">
+    <!-- termite motif tile 1 -->
+    <g transform="translate(60,70)">
+      <ellipse cx="0" cy="0" rx="15" ry="8"/><circle cx="-13" cy="0" r="5"/>
+      <line x1="-16" y1="-3" x2="-22" y2="-7"/><line x1="-16" y1="3" x2="-22" y2="7"/>
+      <line x1="-6" y1="-7" x2="-9" y2="-13"/><line x1="4" y1="-7" x2="6" y2="-13"/>
+      <line x1="-6" y1="7" x2="-9" y2="13"/><line x1="4" y1="7" x2="6" y2="13"/>
+    </g>
+    <!-- termite motif tile 2 (rotated) -->
+    <g transform="translate(250,150) rotate(35)">
+      <ellipse cx="0" cy="0" rx="15" ry="8"/><circle cx="-13" cy="0" r="5"/>
+      <line x1="-16" y1="-3" x2="-22" y2="-7"/><line x1="-16" y1="3" x2="-22" y2="7"/>
+      <line x1="-6" y1="-7" x2="-9" y2="-13"/><line x1="4" y1="-7" x2="6" y2="-13"/>
+      <line x1="-6" y1="7" x2="-9" y2="13"/><line x1="4" y1="7" x2="6" y2="13"/>
+    </g>
+    <!-- termite motif tile 3 -->
+    <g transform="translate(140,260) rotate(-20)">
+      <ellipse cx="0" cy="0" rx="15" ry="8"/><circle cx="-13" cy="0" r="5"/>
+      <line x1="-16" y1="-3" x2="-22" y2="-7"/><line x1="-16" y1="3" x2="-22" y2="7"/>
+      <line x1="-6" y1="-7" x2="-9" y2="-13"/><line x1="4" y1="-7" x2="6" y2="-13"/>
+      <line x1="-6" y1="7" x2="-9" y2="13"/><line x1="4" y1="7" x2="6" y2="13"/>
+    </g>
+  </g>
+  <!-- subtle shield accent (protection) in gold -->
+  <g fill="none" stroke="#C6973F" stroke-width="2" opacity="0.05">
+    <path d="M300 280 l20 7 v16 c0 12 -9 18 -20 22 c-11 -4 -20 -10 -20 -22 v-16 z"/>
+    <path d="M292 300 l6 6 l12 -13"/>
+  </g>
+</svg>

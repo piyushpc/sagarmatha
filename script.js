@@ -133,52 +133,63 @@
   }, { passive: true });
 })();
 
-// ===== CALLBACK FORM → WhatsApp =====
+// ===== CALLBACK FORM → EMAIL (Web3Forms) =====
 (function () {
   const form = document.getElementById('leadForm');
   const errorEl = document.getElementById('formStatus');
-  if (!form || !errorEl) return;
+  const formWrap = document.getElementById('formWrap');
+  const successEl = document.getElementById('formSuccess');
+  if (!form || !errorEl || !formWrap || !successEl) return;
 
-  form.addEventListener('submit', (e) => {
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const btnLabel = submitBtn.querySelector('.btn-label');
+
+  const showError = (msg, focusEl) => {
+    errorEl.textContent = msg;
+    if (focusEl) focusEl.focus();
+  };
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     errorEl.textContent = '';
 
-    const name = form.querySelector('#name').value.trim();
-    const phone = form.querySelector('#phone').value.trim();
-    const city = form.querySelector('#city').value.trim();
-    const message = form.querySelector('#message').value.trim();
+    const nameEl = form.querySelector('#name');
+    const phoneEl = form.querySelector('#phone');
+    const cityEl = form.querySelector('#city');
 
-    if (!name) {
-      errorEl.textContent = 'Please enter your name.';
-      form.querySelector('#name').focus();
-      return;
+    const name = nameEl.value.trim();
+    const phone = phoneEl.value.trim();
+    const city = cityEl.value.trim();
+    const phoneDigits = phone.replace(/[^0-9]/g, '');
+
+    if (!name) return showError('Please enter your name.', nameEl);
+    if (!phone || phoneDigits.length < 7) return showError('Please enter a valid phone number.', phoneEl);
+    if (!city) return showError('Please enter your city or location.', cityEl);
+
+    submitBtn.disabled = true;
+    if (btnLabel) btnLabel.textContent = 'Sending…';
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(form))),
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        formWrap.hidden = true;
+        successEl.hidden = false;
+        form.reset();
+      } else {
+        showError(data.message || 'Something went wrong. Please try again or use WhatsApp below.');
+      }
+    } catch (err) {
+      showError('Could not send your request. Please check your connection or use WhatsApp below.');
+    } finally {
+      submitBtn.disabled = false;
+      if (btnLabel) btnLabel.textContent = 'Submit Request';
     }
-    if (!phone || phone.length < 7) {
-      errorEl.textContent = 'Please enter a valid phone number.';
-      form.querySelector('#phone').focus();
-      return;
-    }
-    if (!city) {
-      errorEl.textContent = 'Please enter your city or location.';
-      form.querySelector('#city').focus();
-      return;
-    }
-
-    const msg = [
-      'Hello, I am requesting a scientific site inspection from your website.',
-      '',
-      'Name: ' + name,
-      'Phone: ' + phone,
-      'City/Location: ' + city,
-      message ? 'Message: ' + message : '',
-    ].filter(Boolean).join('\n');
-
-    const url = 'https://wa.me/916394024817?text=' + encodeURIComponent(msg);
-    window.open(url, '_blank', 'noopener,noreferrer');
-
-    // Reset form
-    form.reset();
-    errorEl.textContent = '';
   });
 })();
 
